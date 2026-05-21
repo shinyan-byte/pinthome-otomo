@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>おとも内見｜「知ってる人」と一緒に始める、住まいさがし｜PINT HOME</title>
+<meta name="description" content="家探しは、「何を探すか」と同じくらい「誰と探すか」が大切。「おとも内見」は、価値観やライフステージの近い同じ担当者が、検討初期から内見・購入まで伴走するサービスです。PINT HOME / 石井優香。">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0f172a">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="おとも内見｜「知ってる人」と一緒に始める、住まいさがし｜PINT HOME">
+<meta property="og:description" content="価値観やライフステージの近い同じ担当者が、検討初期から内見・購入まで伴走するサービス。気になる物件情報をLINEでお送りください。">
+<meta property="og:site_name" content="PINT HOME">
+<meta property="og:locale" content="ja_JP">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='-apple-system,BlinkMacSystemFont,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f5f7fa;
+    --bg-mute:#eef2f7;
+    --ink:#0f172a;
+    --ink-2:#1e293b;
+    --ink-soft:#475569;
+    --ink-mute:#64748b;
+    --line-soft:#e2e8f0;
+    --line-strong:#cbd5e1;
+    --accent:#1d4ed8;
+    --accent-2:#0f172a;
+    --navy:#1e3a5f;
+    --line-app:#06c755;
+    --warn:#b45309;
+    --shadow:0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.06);
+    --shadow-sm:0 1px 2px rgba(15,23,42,.04);
+    --radius:10px;
+    --radius-sm:6px;
+  }
+  :focus{outline:none}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .btn-line:focus-visible, .nav-cta:focus-visible{outline-color:#fff;outline-offset:3px}
+  html{
+    scrollbar-gutter:stable;scroll-behavior:smooth;
+    background:#0a1020;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{
+    font-family:"Inter","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink);background:var(--bg);
+    line-height:1.85;font-size:15px;
+    font-feature-settings:"palt" 1;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    padding-bottom:84px;
+    /* Lock to phone frame on every viewport */
+    max-width:430px;
+    margin:0 auto;
+    position:relative;
+    box-shadow:0 0 60px rgba(0,0,0,.18);
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:none;background:none}
+  .container{padding:0 20px;max-width:1120px;margin:0 auto}
+  .narrow{padding:0 20px;max-width:780px;margin:0 auto}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:saturate(180%) blur(14px);
+    -webkit-backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid transparent;
+    transition:background .25s, border-color .25s, box-shadow .25s;
+  }
+  header.site.scrolled{
+    background:rgba(255,255,255,.92);
+    border-bottom-color:var(--line-soft);
+    box-shadow:0 4px 20px rgba(15,23,42,.05);
+  }
+  .site-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;height:58px;padding:0 18px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;flex-direction:column;justify-content:center;flex-shrink:0;line-height:1.15;color:var(--ink)}
+  .brand-main{font-size:14px;font-weight:700;letter-spacing:.04em}
+  .brand-sub{font-size:9.5px;font-weight:500;color:var(--ink-mute);letter-spacing:.22em;margin-top:3px}
+  .site-nav{display:none}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--line-app);color:#fff;font-weight:700;
+    padding:9px 16px 9px 18px;border-radius:999px;font-size:12px;letter-spacing:.04em;
+    flex-shrink:0;white-space:nowrap;
+    transition:opacity .18s, transform .18s, box-shadow .18s;
+  }
+  .nav-cta:hover{opacity:.92;transform:translateY(-1px);box-shadow:0 6px 16px rgba(6,199,85,.25)}
+  @media (min-width:99999px){
+    .site-inner{height:64px;gap:24px}
+    .site-nav{display:flex;align-items:center;gap:28px;flex:1;justify-content:center}
+    .site-nav a{font-size:12.5px;color:var(--ink-soft);font-weight:600;letter-spacing:.06em;position:relative;padding:6px 2px;transition:color .18s}
+    .site-nav a:hover{color:var(--ink)}
+    .site-nav a::after{content:"";position:absolute;left:50%;bottom:-2px;width:0;height:1.5px;background:var(--accent);transform:translateX(-50%);transition:width .25s ease}
+    .site-nav a:hover::after{width:100%}
+    .brand-main{font-size:15px}
+    .nav-cta{padding:10px 18px 10px 20px;font-size:13px}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;min-height:680px;padding:120px 0 56px;
+    background:var(--ink);color:#fff;overflow:hidden;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex;flex-direction:column;justify-content:flex-end;
+  }
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--ink)}
+  .hero-bg img,
+  .hero-bg video{
+    width:100%;height:100%;object-fit:cover;object-position:75% 75%;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(15,23,42,.15) 0%, rgba(15,23,42,.05) 30%, rgba(15,23,42,.60) 75%, rgba(15,23,42,.72) 100%);
+  }
+  @media (min-width:99999px){
+    .hero-overlay{
+      background:
+        linear-gradient(180deg, rgba(15,23,42,.05) 0%, rgba(15,23,42,0) 35%, rgba(15,23,42,.45) 80%, rgba(15,23,42,.60) 100%),
+        linear-gradient(90deg, rgba(15,23,42,.50) 0%, rgba(15,23,42,.20) 40%, rgba(15,23,42,0) 70%);
+    }
+  }
+  .hero .container{position:relative;z-index:2}
+  .hero-eyebrow{
+    display:inline-block;font-size:11px;letter-spacing:.24em;color:rgba(255,255,255,.78);
+    font-weight:700;margin-bottom:18px;padding:5px 11px;
+    border:1px solid rgba(255,255,255,.28);border-radius:999px;
+    backdrop-filter:blur(4px);
+  }
+  h1.hero-title{
+    font-size:34px;line-height:1.45;font-weight:700;
+    color:#fff;letter-spacing:.02em;margin-bottom:18px;
+    text-shadow:0 2px 18px rgba(0,0,0,.35);
+  }
+  .hero-subhead{
+    font-size:15px;color:#fff;font-weight:600;
+    letter-spacing:.04em;line-height:1.7;
+    margin-bottom:24px;
+    text-shadow:0 1px 10px rgba(0,0,0,.45);
+    display:inline-block;
+    padding:8px 16px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.30);
+    border-radius:999px;
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  }
+  .hero-subhead .plus{
+    display:inline-block;margin:0 6px;color:rgba(255,255,255,.65);font-weight:400;
+  }
+  .hero-lead{
+    font-size:14px;color:rgba(255,255,255,.94);
+    margin-bottom:28px;line-height:1.95;
+    text-shadow:0 1px 10px rgba(0,0,0,.35);max-width:520px;
+  }
+  .hero-tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+  .hero-tags li{
+    display:inline-flex;align-items:center;padding:6px 12px;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.30);
+    border-radius:999px;font-size:12px;letter-spacing:.06em;color:#fff;font-weight:600;
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    text-shadow:0 1px 6px rgba(0,0,0,.25);
+  }
+  .cta-row{display:flex;flex-direction:column;gap:10px;max-width:420px}
+  .btn-line{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--line-app);color:#fff;font-weight:700;
+    padding:16px 24px;border-radius:var(--radius);font-size:14px;letter-spacing:.04em;
+    width:100%;transition:opacity .18s, transform .18s, box-shadow .18s;
+  }
+  .btn-line:hover{opacity:.92;transform:translateY(-1px);box-shadow:0 8px 24px rgba(6,199,85,.30)}
+  .btn-line .icon{width:18px;height:18px;flex-shrink:0}
+  .btn-ghost{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    color:var(--ink);font-weight:600;font-size:13px;
+    padding:14px 18px;border:1px solid var(--line-strong);border-radius:var(--radius);
+    background:#fff;width:100%;
+  }
+  .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+  .hero .btn-ghost{
+    background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.45);color:#fff;
+    backdrop-filter:saturate(160%) blur(8px);-webkit-backdrop-filter:saturate(160%) blur(8px);
+  }
+  .hero .btn-ghost:hover{background:rgba(255,255,255,.20);border-color:#fff;color:#fff}
+  .hero-note{font-size:11px;color:rgba(255,255,255,.6);margin-top:14px;letter-spacing:.04em}
+
+  @media (min-width:99999px){
+    h1.hero-title{font-size:48px;line-height:1.4}
+    .hero-subhead{font-size:16px;padding:9px 18px}
+    .hero-lead{font-size:15px}
+    .cta-row{flex-direction:row;gap:12px}
+    .cta-row .btn-line{flex:1.4}
+    .cta-row .btn-ghost{flex:1}
+  }
+
+  /* ===== Mini Speaker (subtle intro) ===== */
+  .mini-speaker{
+    background:#fff;border-bottom:1px solid var(--line-soft);
+    padding:28px 0 30px;
+  }
+  .mini-card{
+    display:flex;align-items:flex-start;gap:14px;
+    max-width:680px;margin:0 auto;padding:0 22px;
+  }
+  .mini-avatar{
+    width:48px;height:48px;border-radius:50%;overflow:hidden;
+    background:var(--bg-mute);flex-shrink:0;
+  }
+  .mini-avatar img{width:100%;height:100%;object-fit:cover}
+  .mini-text{flex:1;min-width:0}
+  .mini-hi{
+    font-size:13.5px;color:var(--ink);font-weight:700;
+    letter-spacing:.02em;margin-bottom:2px;line-height:1.5;
+  }
+  .mini-role{
+    font-size:11px;color:var(--ink-mute);letter-spacing:.04em;
+    line-height:1.55;margin-bottom:8px;
+  }
+  .mini-tag{
+    font-size:12.5px;color:var(--ink-soft);line-height:1.8;letter-spacing:.02em;
+  }
+  .mini-more{
+    display:inline-block;margin-top:8px;
+    font-size:11.5px;color:var(--ink-mute);font-weight:600;letter-spacing:.04em;
+    transition:color .15s;
+  }
+  .mini-more:hover{color:var(--accent)}
+  @media (min-width:99999px){
+    .mini-avatar{width:56px;height:56px}
+    .mini-hi{font-size:14.5px}
+    .mini-role{font-size:11.5px}
+    .mini-tag{font-size:13px}
+  }
+
+  /* ===== Stats (KPI) ===== */
+  .stats{background:var(--bg);border-bottom:1px solid var(--line-soft);padding:36px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center}
+  .stats-item{padding:0 8px}
+  .stats-grid > .stats-item + .stats-item{border-left:1px solid var(--line-soft)}
+  .stats-label{font-size:10px;letter-spacing:.22em;color:var(--ink-mute);font-weight:700;margin-bottom:8px}
+  .stats-value{display:inline-flex;align-items:baseline;gap:3px;color:var(--ink);margin-bottom:8px;line-height:1}
+  .stats-value .num{font-size:30px;font-weight:700;letter-spacing:-.02em;font-feature-settings:"tnum" 1}
+  .stats-value .unit{font-size:12px;font-weight:600;color:var(--ink-soft);letter-spacing:.04em}
+  .stats-note{font-size:10px;color:var(--ink-mute);letter-spacing:.02em;line-height:1.6;max-width:200px;margin:0 auto}
+  @media (min-width:99999px){
+    .stats-value .num{font-size:38px}
+  }
+
+  /* ===== Section common ===== */
+  section{padding:64px 0;position:relative}
+  .sec-label{font-size:11px;letter-spacing:.24em;color:var(--accent);font-weight:700;margin-bottom:12px}
+  .sec-label::before{content:"— ";color:var(--ink-mute)}
+  h2.section-title{font-size:24px;color:var(--ink);font-weight:700;margin-bottom:16px;letter-spacing:.005em;line-height:1.55}
+  .section-lead{color:var(--ink-soft);margin:0 0 40px;font-size:14px;line-height:1.95;max-width:600px}
+  @media (min-width:99999px){
+    h2.section-title{font-size:30px}
+  }
+
+  /* ===== Concept ===== */
+  .concept{background:var(--bg-soft);border-bottom:1px solid var(--line-soft)}
+  .why-grid{display:grid;grid-template-columns:1fr;gap:0}
+  .why-card{padding:28px 0;border-bottom:1px solid var(--line-soft)}
+  .why-card:last-child{border-bottom:none}
+  .why-num{font-size:11px;letter-spacing:.18em;color:var(--ink-mute);font-weight:700;margin-bottom:10px;display:block}
+  .why-card h3{font-size:17px;color:var(--ink);margin-bottom:8px;line-height:1.6;font-weight:700}
+  .why-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.95}
+  @media (min-width:99999px){
+    .why-grid{grid-template-columns:repeat(3,1fr);gap:28px}
+    .why-card{padding:0;border-bottom:none}
+  }
+
+  /* ===== Eligibility ===== */
+  .eligibility{background:#fff;border-bottom:1px solid var(--line-soft)}
+  .eli-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+  @media (min-width:99999px){.eli-grid{grid-template-columns:1fr 1fr;gap:20px}}
+  .eli-card{border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px}
+  .eli-card.ok{background:linear-gradient(180deg,#f0fdf4,#ffffff)}
+  .eli-card.ng{background:linear-gradient(180deg,#fef2f2,#ffffff)}
+  .eli-card h3{font-size:14px;font-weight:700;letter-spacing:.06em;margin-bottom:14px}
+  .eli-card.ok h3{color:#166534}
+  .eli-card.ng h3{color:#991b1b}
+  .eli-list{list-style:none;display:grid;gap:10px}
+  .eli-list li{font-size:13.5px;line-height:1.7;color:var(--ink-2);padding-left:26px;position:relative}
+  .eli-list.ok li::before{
+    content:"";position:absolute;left:0;top:6px;width:16px;height:16px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2316a34a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8.5l3.2 3.2L13 5'/></svg>");
+    background-repeat:no-repeat;background-size:contain;
+  }
+  .eli-list.ng li::before{
+    content:"";position:absolute;left:0;top:6px;width:16px;height:16px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23dc2626' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M4 4l8 8M12 4l-8 8'/></svg>");
+    background-repeat:no-repeat;background-size:contain;
+  }
+
+  /* ===== Trust ===== */
+  .trust{background:#fff;border-bottom:1px solid var(--line-soft)}
+  .trust-quote{
+    font-size:22px;line-height:1.65;font-weight:700;color:var(--ink);
+    letter-spacing:.01em;margin:0 0 28px;
+  }
+  .trust-quote em{font-style:normal;color:var(--accent)}
+  .trust-body{font-size:14.5px;color:var(--ink-soft);line-height:2;max-width:680px}
+  .trust-body p + p{margin-top:14px}
+  .trust-body strong{color:var(--ink);font-weight:700}
+  @media (min-width:99999px){
+    .trust-quote{font-size:30px;line-height:1.55}
+  }
+
+  /* ===== Concern (For you) ===== */
+  .concern{background:var(--bg-soft);border-bottom:1px solid var(--line-soft)}
+  .concern-list{display:grid;grid-template-columns:1fr;gap:12px;list-style:none;padding:0}
+  @media (min-width:99999px){.concern-list{grid-template-columns:repeat(2,1fr);gap:14px}}
+  .concern-item{
+    background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:18px 22px;font-size:13.5px;color:var(--ink-2);line-height:1.8;
+    position:relative;padding-left:46px;
+  }
+  .concern-item::before{
+    content:"";position:absolute;left:18px;top:20px;width:18px;height:18px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d4ed8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 15h.01M12 7v6'/></svg>");
+    background-repeat:no-repeat;background-size:contain;
+  }
+
+  /* ===== Why ===== */
+  .why-sec{background:#fff;border-bottom:1px solid var(--line-soft)}
+  .why-image{
+    margin:0 0 32px;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:16/9;
+  }
+  .why-image img{width:100%;height:100%;object-fit:cover;display:block}
+  .quote-block{
+    border-left:3px solid var(--accent);
+    padding:14px 18px;background:var(--bg-soft);
+    font-size:14px;color:var(--ink-2);line-height:1.95;margin:14px 0;
+    border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  @media (min-width:99999px){
+    .why-image{aspect-ratio:21/9}
+  }
+
+  /* ===== Change (Before/After) ===== */
+  .change{background:var(--bg-soft);border-bottom:1px solid var(--line-soft)}
+  .ba-list{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:99999px){.ba-list{grid-template-columns:repeat(2,1fr);gap:18px}}
+  .ba-card{
+    background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:22px;display:grid;gap:14px;
+  }
+  .ba-before, .ba-after{padding:14px 16px;border-radius:var(--radius-sm);font-size:13.5px;line-height:1.8}
+  .ba-before{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;position:relative}
+  .ba-after{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;position:relative}
+  .ba-before::before, .ba-after::before{
+    display:block;font-size:10px;letter-spacing:.22em;font-weight:700;margin-bottom:6px;
+  }
+  .ba-before::before{content:"BEFORE";color:#dc2626}
+  .ba-after::before{content:"AFTER";color:#059669}
+  .ba-arrow{
+    text-align:center;font-size:12px;color:var(--ink-mute);font-weight:700;letter-spacing:.22em;
+    position:relative;
+  }
+  .ba-arrow::before, .ba-arrow::after{
+    content:"";display:inline-block;width:24px;height:1px;background:var(--line-strong);
+    vertical-align:middle;margin:0 8px;
+  }
+
+  /* ===== Voice ===== */
+  .voice{background:#fff}
+  .voice-list{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:99999px){.voice-list{grid-template-columns:repeat(3,1fr);gap:16px}}
+  .voice-card{
+    background:var(--bg-soft);border:1px solid var(--line-soft);
+    border-radius:var(--radius);padding:24px 22px 20px;position:relative;
+    display:flex;flex-direction:column;
+  }
+  .voice-card::before{
+    content:"\201C";position:absolute;top:6px;left:18px;
+    font-size:54px;color:var(--line-strong);font-family:Georgia,serif;line-height:1;
+  }
+  .voice-text{font-size:13.5px;color:var(--ink-2);line-height:1.95;margin-bottom:16px;padding-top:24px;flex:1}
+  .voice-meta{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line-soft);padding-top:14px}
+  .voice-avatar{width:36px;height:36px;border-radius:50%;background:var(--bg-mute);flex-shrink:0;overflow:hidden}
+  .voice-avatar img{width:100%;height:100%;object-fit:cover}
+  .voice-attr{font-size:11.5px;color:var(--ink-mute);letter-spacing:.04em;font-weight:600;line-height:1.5}
+
+  /* ===== Speaker ===== */
+  .speaker{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .speaker-card{
+    background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;
+  }
+  .speaker-card > *{width:100%}
+  .speaker-avatar{width:108px;height:108px;border-radius:50%;background:var(--bg-mute);overflow:hidden;flex-shrink:0;margin:0 auto}
+  .speaker-avatar img{width:100%;height:100%;object-fit:cover}
+  .speaker-info{text-align:center}
+  .speaker-info .role{font-size:11px;color:var(--ink-mute);letter-spacing:.18em;font-weight:600;margin-bottom:6px}
+  .speaker-info h3{font-size:22px;color:var(--ink);margin-bottom:4px;font-weight:700;letter-spacing:.02em}
+  .speaker-info .name-en{font-size:11px;color:var(--ink-mute);letter-spacing:.16em;margin-bottom:14px}
+  .speaker-tagline{
+    display:inline-block;
+    font-size:13px;font-weight:700;letter-spacing:.04em;
+    color:var(--ink);
+    padding:8px 16px;
+    background:var(--bg-soft);
+    border:1px solid var(--line-soft);
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .speaker-tagline .plus{
+    display:inline-block;margin:0 6px;color:var(--ink-mute);font-weight:500;
+  }
+  .speaker-info p{font-size:13.5px;color:var(--ink-soft);line-height:1.95}
+  .speaker-message{
+    background:var(--bg-soft);padding:20px 22px;margin:6px 0 22px;
+    font-size:13.5px;color:var(--ink-2);line-height:2.0;letter-spacing:.04em;
+    border-radius:12px;text-align:left;
+  }
+  .speaker-data{display:grid;gap:0;border-top:1px solid var(--line-soft);margin-top:6px;text-align:left}
+  .speaker-data .row{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+  .speaker-data dt{font-size:11px;color:var(--ink-mute);font-weight:600;letter-spacing:.18em;line-height:1.85}
+  .speaker-data dd{font-size:13px;color:var(--ink-2);line-height:1.85;letter-spacing:.02em}
+
+  /* ===== Instagram ===== */
+  .ig{background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .ig-lead{font-size:14.5px;color:var(--ink-soft);line-height:2;max-width:680px;margin:0 0 32px}
+  .ig-lead strong{color:var(--ink);font-weight:700}
+  .ig-link{
+    display:flex;align-items:center;gap:18px;
+    background:#fff;border:1px solid var(--line-soft);border-radius:14px;
+    padding:20px 22px;max-width:560px;margin:0 auto;
+    box-shadow:0 1px 2px rgba(15,23,42,.04), 0 10px 28px rgba(15,23,42,.06);
+    transition:transform .18s, box-shadow .2s, border-color .2s;
+  }
+  .ig-link:hover{
+    transform:translateY(-2px);
+    box-shadow:0 1px 2px rgba(15,23,42,.04), 0 16px 36px rgba(15,23,42,.10);
+    border-color:var(--line-strong);
+  }
+  .ig-link .ig-logo{
+    width:48px;height:48px;border-radius:14px;flex-shrink:0;
+    background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    box-shadow:0 6px 18px rgba(220,39,67,.25);
+  }
+  .ig-link .ig-logo svg{width:26px;height:26px}
+  .ig-link .ig-text{flex:1;min-width:0}
+  .ig-link .ig-handle{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.3}
+  .ig-link .ig-desc{font-size:12px;color:var(--ink-mute);margin-top:3px;line-height:1.55;letter-spacing:.02em}
+  .ig-link .ig-arrow{font-size:18px;color:var(--ink-mute);flex-shrink:0;transition:color .2s, transform .2s}
+  .ig-link:hover .ig-arrow{color:var(--accent);transform:translateX(3px)}
+
+  /* ===== Prep showcase (調査の様子) ===== */
+  .prep{background:#fff;border-bottom:1px solid var(--line-soft)}
+  .prep-image{
+    margin:0;overflow:hidden;background:#fff;
+  }
+  .prep-image img{width:100%;height:auto;display:block}
+  .prep-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:32px}
+  @media (min-width:99999px){.prep-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .prep-item{
+    background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;
+    transition:border-color .2s, box-shadow .2s, transform .15s;
+  }
+  .prep-item:hover{border-color:var(--line-strong);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+  .prep-pic{aspect-ratio:4/3;overflow:hidden;background:var(--bg-mute);position:relative}
+  .prep-pic img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .prep-item:hover .prep-pic img{transform:scale(1.04)}
+  .prep-pic .tag{
+    position:absolute;top:12px;left:12px;
+    background:rgba(15,23,42,.82);color:#fff;
+    font-size:10px;font-weight:700;letter-spacing:.18em;
+    padding:5px 10px;border-radius:999px;
+    backdrop-filter:blur(4px);
+  }
+  .prep-body{padding:18px 18px 20px}
+  .prep-body h3{font-size:15px;color:var(--ink);font-weight:700;margin-bottom:6px;line-height:1.55;letter-spacing:.02em}
+  .prep-body p{font-size:13px;color:var(--ink-soft);line-height:1.85}
+
+  /* ===== How It Works ===== */
+  .howitworks{background:var(--bg-soft);border-bottom:1px solid var(--line-soft)}
+  .how-list{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line-soft);background:#fff;border-radius:var(--radius);padding:0 22px}
+  .how-item{
+    display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;
+    padding:18px 4px;border-bottom:1px solid var(--line-soft);
+  }
+  .how-item:last-child{border-bottom:none}
+  .how-item .ic{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--bg-soft);border:1px solid var(--line-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);
+  }
+  .how-item .ic svg{width:16px;height:16px}
+  .how-item p{font-size:13.5px;color:var(--ink-2);line-height:1.9}
+
+  /* ===== Price ===== */
+  .price{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .price-summary{
+    background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+    margin-bottom:24px;overflow:hidden;
+  }
+  .price-row{
+    display:flex;justify-content:space-between;align-items:center;
+    gap:18px;padding:20px 22px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .price-row:last-child{border-bottom:none}
+  .price-row .ps-label{
+    font-size:13.5px;color:var(--ink-2);line-height:1.65;flex:1;letter-spacing:.02em;
+  }
+  .price-row .ps-value{
+    font-size:20px;font-weight:700;letter-spacing:.02em;flex-shrink:0;
+    font-feature-settings:"tnum" 1;
+  }
+  .price-row.free .ps-value{color:var(--accent)}
+  .price-row.paid{background:linear-gradient(180deg,#fffbeb,#fffdf5)}
+  .price-row.paid .ps-value{color:#b45309;font-size:15px}
+  .price-note-box{
+    background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:20px 22px;font-size:13px;color:var(--ink-2);line-height:1.95;
+  }
+  .price-note-box ul{list-style:none;display:grid;gap:8px}
+  .price-note-box li{padding-left:22px;position:relative}
+  .price-note-box li::before{
+    content:"";position:absolute;left:0;top:8px;width:14px;height:14px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%2316a34a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M3 7.5l2.5 2.5L11 4'/></svg>");
+    background-repeat:no-repeat;background-size:contain;
+  }
+  .price-example{
+    margin-top:18px;background:var(--bg-soft);border:1px dashed var(--line-strong);
+    border-radius:var(--radius-sm);padding:16px 18px;font-size:12.5px;color:var(--ink-soft);line-height:1.85;
+  }
+  .price-example strong{color:var(--ink);font-weight:700}
+
+  /* ===== Flow ===== */
+  .flow{background:#fff}
+  .flow-list{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:99999px){.flow-list{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .flow-item{
+    background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:24px 22px;position:relative;
+  }
+  .flow-item .step{
+    display:inline-block;font-size:10px;letter-spacing:.22em;color:#fff;
+    background:var(--ink);padding:4px 10px;border-radius:999px;font-weight:700;margin-bottom:14px;
+  }
+  .flow-item h3{font-size:16px;color:var(--ink);margin-bottom:8px;line-height:1.55;font-weight:700}
+  .flow-item p{font-size:13px;color:var(--ink-soft);line-height:1.9}
+
+  /* ===== FAQ ===== */
+  .faq{background:var(--bg-soft);border-top:1px solid var(--line-soft)}
+  .faq-list{display:grid;gap:0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  details.q{background:transparent;border-bottom:1px solid var(--line-soft);padding:20px 4px}
+  details.q:last-child{border-bottom:none}
+  details.q summary{
+    cursor:pointer;font-weight:600;color:var(--ink);font-size:14.5px;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;line-height:1.65;
+  }
+  details.q summary::-webkit-details-marker{display:none}
+  details.q summary::after{
+    content:"";width:14px;height:14px;flex-shrink:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%230f172a' stroke-width='1.6' stroke-linecap='round'><path d='M7 1v12M1 7h12'/></svg>");
+    background-size:contain;background-repeat:no-repeat;transition:transform .25s;
+  }
+  details.q[open] summary::after{
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%230f172a' stroke-width='1.6' stroke-linecap='round'><path d='M1 7h12'/></svg>");
+  }
+  details.q .a{margin-top:12px;color:var(--ink-soft);font-size:13.5px;line-height:1.95}
+
+  /* ===== Final CTA ===== */
+  .final-cta{background:var(--ink);color:#fff;text-align:left;padding:64px 0}
+  .final-cta h2{font-size:24px;margin-bottom:14px;letter-spacing:.005em;line-height:1.55;font-weight:700;color:#fff}
+  .final-cta p{color:rgba(255,255,255,.78);margin-bottom:28px;font-size:14px;line-height:1.95}
+  .final-cta .btn-line{font-size:14px;padding:16px 24px;max-width:420px}
+  .final-cta .small-note{margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.7}
+  .final-cta .sec-label{margin-bottom:14px;color:#93c5fd}
+  @media (min-width:99999px){.final-cta h2{font-size:30px}}
+
+  /* ===== Inline mid CTA ===== */
+  .mid-cta{
+    background:linear-gradient(180deg,#fff,var(--bg-soft));
+    border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+    padding:36px 0;
+  }
+  .mid-cta-inner{display:flex;flex-direction:column;gap:14px;align-items:center;max-width:780px;margin:0 auto;padding:0 20px;text-align:center}
+  .mid-cta-text{font-size:14.5px;color:var(--ink);font-weight:700;line-height:1.7}
+  .mid-cta-text small{display:block;font-size:12px;color:var(--ink-soft);font-weight:500;margin-top:4px;letter-spacing:.02em}
+  .mid-cta .btn-line{max-width:360px}
+  @media (min-width:99999px){
+    .mid-cta-inner{flex-direction:row;justify-content:space-between;align-items:center}
+    .mid-cta-text{flex:1}
+    .mid-cta .btn-line{width:auto;min-width:260px}
+  }
+
+  /* ===== Footer ===== */
+  footer.site{background:#0a1020;color:rgba(255,255,255,.65);padding:36px 0 24px}
+  .footer-inner{display:grid;gap:16px;padding:0 20px;max-width:1120px;margin:0 auto}
+  .footer-brand{color:#fff;font-weight:700;letter-spacing:.04em;font-size:14px}
+  .footer-tag{font-size:12px;color:rgba(255,255,255,.55);line-height:1.7;max-width:520px}
+  .footer-meta{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.04em;margin-top:8px}
+
+  /* ===== Mobile fixed bottom CTA (centered to phone-frame) ===== */
+  .sticky-cta{
+    position:fixed;
+    left:50%;bottom:0;z-index:99;
+    width:100%;max-width:430px;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:saturate(180%) blur(14px);
+    border-top:1px solid var(--line-soft);
+    box-shadow:0 -6px 20px rgba(15,23,42,.10);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    transform:translate(-50%, 110%);
+    transition:transform .35s cubic-bezier(.2,.7,.2,1);
+    pointer-events:none;
+  }
+  .sticky-cta.show{
+    transform:translate(-50%, 0);
+    pointer-events:auto;
+  }
+  .sticky-cta .btn-line{padding:14px 18px;font-size:14px}
+
+  .center{text-align:center}
+  .mt-24{margin-top:24px}
+  .mt-32{margin-top:32px}
+
+  /* ===== Scroll Reveal Animations ===== */
+  @media (prefers-reduced-motion: no-preference){
+    html.js-anim .reveal{
+      opacity:0;transform:translateY(28px);
+      transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+      will-change:opacity, transform;
+    }
+    html.js-anim .reveal.in-view{opacity:1;transform:translateY(0)}
+
+    html.js-anim .reveal-stagger > *{
+      opacity:0;transform:translateY(22px);
+      transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+      will-change:opacity, transform;
+    }
+    html.js-anim .reveal-stagger.in-view > *{opacity:1;transform:translateY(0)}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(1){transition-delay:0ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(2){transition-delay:80ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(3){transition-delay:160ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(4){transition-delay:240ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(5){transition-delay:320ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(6){transition-delay:400ms}
+    html.js-anim .reveal-stagger.in-view > *:nth-child(n+7){transition-delay:480ms}
+
+    /* Section titles: subtle fade from below */
+    html.js-anim section .sec-label,
+    html.js-anim section h2.section-title,
+    html.js-anim section .section-lead{
+      opacity:0;transform:translateY(16px);
+      transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+    }
+    html.js-anim section.in-view .sec-label,
+    html.js-anim section.in-view h2.section-title,
+    html.js-anim section.in-view .section-lead{
+      opacity:1;transform:translateY(0);
+    }
+    html.js-anim section.in-view h2.section-title{transition-delay:80ms}
+    html.js-anim section.in-view .section-lead{transition-delay:160ms}
+
+    /* Hero entrance */
+    .hero h1.hero-title,
+    .hero .hero-lead,
+    .hero .cta-row{
+      opacity:0;transform:translateY(24px);
+      animation:heroIn 1s cubic-bezier(.22,.61,.36,1) forwards;
+    }
+    .hero h1.hero-title{animation-delay:.12s}
+    .hero .hero-lead{animation-delay:.32s}
+    .hero .cta-row{animation-delay:.52s}
+    @keyframes heroIn{
+      to{opacity:1;transform:translateY(0)}
+    }
+    .hero-bg img,
+    .hero-bg video{
+      animation:heroZoom 18s ease-out forwards;
+    }
+    @keyframes heroZoom{
+      from{transform:scale(1.08)}
+      to{transform:scale(1)}
+    }
+
+    /* LINE icon subtle pulse */
+    .btn-line .icon{animation:linePulse 2.6s ease-in-out infinite}
+    @keyframes linePulse{
+      0%,100%{transform:scale(1)}
+      50%{transform:scale(1.10)}
+    }
+
+    /* CTA shimmer on hover */
+    .btn-line{position:relative;overflow:hidden}
+    .btn-line::after{
+      content:"";position:absolute;top:0;left:-120%;
+      width:80%;height:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+      transform:skewX(-20deg);
+      transition:left .8s ease;
+      pointer-events:none;
+    }
+    .btn-line:hover::after{left:130%}
+
+    /* Voice quote subtle float */
+    .voice-card::before{
+      transition:transform .35s ease, color .35s ease;
+    }
+    .voice-card:hover::before{
+      transform:translateY(-2px) scale(1.05);
+      color:var(--accent);
+    }
+
+    /* BA-arrow soft bounce on in-view */
+    .reveal-stagger.in-view .ba-arrow{
+      animation:baFloat 2.4s ease-in-out infinite;
+    }
+    @keyframes baFloat{
+      0%,100%{opacity:.7}
+      50%{opacity:1}
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site" id="siteHeader">
+  <div class="site-inner">
+    <a class="brand" href="#top">
+      <span class="brand-main">おとも内見</span>
+      <span class="brand-sub">by PINT HOME</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#concept">サービス</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#speaker">プロフィール</a>
+      <a href="#instagram">発信</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-cta" href="https://il9fo0d8.autosns.app/addfriend/s/VI9Jw20ZLk/@074himyv" target="_blank" rel="noopener">
+      LINEで相談 <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <video
+      autoplay muted loop playsinline preload="metadata"
+      poster="assets/yuka-hero.jpg"
+      aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
+      <img src="assets/yuka-hero.jpg" alt="PINT HOME 石井優香" loading="eager">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <h1 class="hero-title">
+      知ってる人と、<br>
+      一緒に見に行く。
+    </h1>
+    <p class="hero-lead">
+      気になる物件があるけれど、買うかはまだ決めていない。<br>
+      そんな段階から、軽い気持ちで一緒に動けるサービスです。
+    </p>
+    <div class="cta-row">
+      <a class="btn-line" href="https://il9fo0d8.autosns.app/addfriend/s/VI9Jw20ZLk/@074himyv" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.477 3 2 6.582 2 11c0 2.59 1.55 4.88 3.95 6.35-.17.62-.62 2.27-.71 2.62-.11.44.16.43.34.31.14-.09 2.27-1.55 3.18-2.18.74.1 1.5.16 2.24.16 5.523 0 10-3.582 10-8s-4.477-8-10-8z"/></svg>
+        LINEで物件情報を送ってみる
+      </a>
+      <a class="btn-ghost" href="#concept">まずサービス内容を見る ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MINI SPEAKER (subtle intro) ===== -->
+<section class="mini-speaker">
+  <div class="mini-card reveal">
+    <div class="mini-avatar">
+      <img src="assets/yuka-avatar.jpg" alt="石井 優香" loading="lazy">
+    </div>
+    <div class="mini-text">
+      <p class="mini-hi">こんにちは、ゆかです☀️</p>
+      <p class="mini-role">PINT HOME / 2児のママ・共働き</p>
+      <p class="mini-tag">このサービスは、SNS等で発信を見ていただいている方を対象としています。どんな人か不安な方は、まずは日々の発信をチェックしてみてくださいね。</p>
+      <a href="https://www.instagram.com/yuka_pinthome/" target="_blank" rel="noopener" class="mini-more">日々の発信を見る ›</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CONCEPT ===== -->
+<section class="concept" id="concept">
+  <div class="container">
+    <span class="sec-label">CONCEPT</span>
+    <h2 class="section-title">「おとも内見」とは</h2>
+    <p class="section-lead">
+      「私と一緒に内見に行く」から始まる、住まい探しのかたちです。<br><br>
+      「気になる物件はあるけれど、買うかわからないからお願いしにくい」<br>
+      「内見のとき、どんな担当者が出てくるか不安」<br>
+      ——そんなお声から、このサービスが生まれました。
+    </p>
+    <div class="why-grid reveal-stagger">
+      <div class="why-card">
+        <span class="why-num">— 01</span>
+        <h3>買うか決めてなくて、OK</h3>
+        <p>「まだ検討中だから」と遠慮する必要はありません。
+        購入を決める前段階から、一緒に物件を見て、考えるのが私たちプロの役割です。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-num">— 02</span>
+        <h3>同じ担当者と、最後まで</h3>
+        <p>1件目から成約後まで、ずっと同じ担当者が伴走します。
+        毎回ゼロから話し直す必要がなく、「比較の積み重ね」で判断軸が育っていきます。</p>
+      </div>
+      <div class="why-card">
+        <span class="why-num">— 03</span>
+        <h3>成約までは、費用ゼロ</h3>
+        <p>ご相談・内見同行・住宅ローン相談・リノベ会社紹介——
+        すべて無料です。費用が発生するのは、ご購入が決まり、引き渡しの時のみ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ELIGIBILITY ===== -->
+<section class="eligibility" id="eligibility">
+  <div class="container">
+    <span class="sec-label">ELIGIBILITY</span>
+    <h2 class="section-title">こんな方の<br>“おとも” ができます</h2>
+    <p class="section-lead">
+      対応できる条件をはっきりお伝えします。ご確認ください。
+    </p>
+    <div class="eli-grid reveal-stagger">
+      <div class="eli-card ok">
+        <h3>✓ 対応できます</h3>
+        <ul class="eli-list ok">
+          <li>物件は気になっているけど、買うかはまだ決めていない</li>
+          <li>まだどこの不動産会社にも問い合わせていない物件</li>
+          <li>関東圏（東京・神奈川・千葉・埼玉の一部）の物件</li>
+          <li>中古マンション / 中古戸建て / リノベーション前提の物件</li>
+          <li>子育て世代のご家族・共働きのご夫婦・はじめての住宅購入</li>
+          <li>投資用物件・収益物件のご相談</li>
+        </ul>
+      </div>
+      <div class="eli-card ng">
+        <h3>✗ 対応が難しいケース</h3>
+        <ul class="eli-list ng">
+          <li>すでに他社で内見・問い合わせ済みの物件（業界ルール上、先に問い合わせた会社が窓口になります）</li>
+          <li>上記対応エリア外の物件</li>
+          <li>リノベーション工務店のご紹介のみのご相談</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MID CTA ===== -->
+<section class="mid-cta">
+  <div class="mid-cta-inner reveal">
+    <div class="mid-cta-text">
+      ご自身が対象か、迷ったらまずLINEで物件の情報を送ってみてください。
+      <small>該当しない場合でも、その旨を丁寧にお返事します。</small>
+    </div>
+    <a class="btn-line" href="https://il9fo0d8.autosns.app/addfriend/s/VI9Jw20ZLk/@074himyv" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.477 3 2 6.582 2 11c0 2.59 1.55 4.88 3.95 6.35-.17.62-.62 2.27-.71 2.62-.11.44.16.43.34.31.14-.09 2.27-1.55 3.18-2.18.74.1 1.5.16 2.24.16 5.523 0 10-3.582 10-8s-4.477-8-10-8z"/></svg>
+      一緒に見に行きたい物件情報を送る
+    </a>
+  </div>
+</section>
+
+<!-- ===== TRUST ===== -->
+<section class="trust" id="trust">
+  <div class="container narrow">
+    <span class="sec-label">MESSAGE</span>
+    <h2 class="section-title">不動産屋さんへの問い合わせって、<br>ハードル高いですよね。</h2>
+    <div class="trust-body reveal">
+      <p>
+        <strong>「営業されたらどうしよう」<br>
+        「決めなきゃいけない雰囲気が苦手」</strong><br>
+        ——お客様から、よくご相談をいただきます。
+      </p>
+      <p>
+        SNSでの発信をはじめてから、<strong>「この物件、ゆかさん的にどうですか？」</strong>というDMも増えてきました。
+      </p>
+      <p>
+        ただ、現地を一緒に見てみないと、物件の評価は正直できません。実物を見ずに管理状態や価格の妥当性を判断することは、私はしないようにしています。
+      </p>
+      <p>
+        だから、<strong>内見を申し込む前に、軽い気持ちで声をかけていただけたら嬉しいです</strong>。<br>
+        「この物件だけ見たい」「買うかはまだわからない」——それで大丈夫です。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONCERN ===== -->
+<section class="concern" id="concern">
+  <div class="container">
+    <span class="sec-label">FOR YOU</span>
+    <h2 class="section-title">こんなことで<br>悩んでいませんか？</h2>
+    <p class="section-lead">
+      物件探しが進まないのは、優柔不断だからではなく、
+      「比較する目線」が定まっていないだけかもしれません。
+    </p>
+    <ul class="concern-list reveal-stagger">
+      <li class="concern-item">内見を何件かしてみたけれど、決め手がつかめない。</li>
+      <li class="concern-item">担当者の言葉が、本当に中立なのかわからない。</li>
+      <li class="concern-item">子連れで内見するのが大変で、前に進めない。</li>
+      <li class="concern-item">物件・ローン・教育費……考えすぎて、動けなくなってきた。</li>
+      <li class="concern-item">価値観の近い人に、気軽に意見を聞きたい。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why-sec" id="why">
+  <div class="container narrow">
+    <span class="sec-label">WHY</span>
+    <h2 class="section-title">なかなか見つからないのは、<br>探し方が“点”のままだから。</h2>
+    <div class="why-image">
+      <img src="assets/why.png" alt="点と点を線でつなぐイメージ" loading="lazy">
+    </div>
+    <p class="section-lead">
+      1件ずつ別の担当者と内見すると、毎回ゼロから話し直し。
+      物件の評価は「絶対値」ではなく、「比較の積み重ね」でしか定まりません。
+    </p>
+    <div class="quote-block">
+      「前の物件と比べて、ここは譲れる」<br>
+      「あの物件で気になった駅距離は、商店街を歩けるなら気にならなかった」
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.95;margin-top:18px">
+      “相対評価”を積み上げていくには、同じ担当者と動く時間が必要です。<br>
+      <strong style="color:var(--ink)">「何を探すか」の前に、「誰と探すか」から。</strong><br>
+      価値観やライフステージの近い人と進める住まい探し——それが「おとも内見」です。
+    </p>
+  </div>
+</section>
+
+<!-- ===== CHANGE (Before/After) ===== -->
+<section class="change" id="change">
+  <div class="container">
+    <span class="sec-label">WHAT CHANGES</span>
+    <h2 class="section-title">一緒に行くと、こう変わります</h2>
+    <p class="section-lead">
+      内見の質と、判断のしやすさが変わります。ひとりで抱え込む時間が、ぐっと短くなります。
+    </p>
+    <div class="ba-list reveal-stagger">
+      <div class="ba-card">
+        <div class="ba-before">「この価格って高いの？」が正直わからない。</div>
+        <div class="ba-arrow">CHANGE</div>
+        <div class="ba-after">周辺の成約事例データをもとに、「高い・安い」が数字でわかる。</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-before">マンションの管理状態、何を見ればいいかわからない。</div>
+        <div class="ba-arrow">CHANGE</div>
+        <div class="ba-after">「ここ見ておきましょう」と現地で一緒にチェック。修繕履歴も事前に調査。</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-before">内見のあと、一人でぐるぐる考えてしまう。</div>
+        <div class="ba-arrow">CHANGE</div>
+        <div class="ba-after">気になるポイントは後から何度でも質問できる。LINEで気軽に。</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-before">物件＋ローン＋リノベ……数字が多すぎて動けない。</div>
+        <div class="ba-arrow">CHANGE</div>
+        <div class="ba-after">「月々いくらか」に整理して、判断できる状態に。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="voice" id="voice">
+  <div class="container">
+    <span class="sec-label">VOICE</span>
+    <h2 class="section-title">ご一緒した方の声</h2>
+    <div class="voice-list reveal-stagger">
+      <div class="voice-card">
+        <p class="voice-text">
+          気になる物件が複数あり、売主さんがまだ住んでいる物件もありましたが、
+          内見日程を迅速に調整いただきました。内見当日、3歳になる息子も同行していたのですが、
+          声掛けしてくれたり、気を配っていただき、夫婦で内見に集中できました。
+        </p>
+        <div class="voice-meta">
+          <div class="voice-avatar"><img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Famiry30&backgroundColor=dbeafe" alt="" loading="lazy"></div>
+          <div class="voice-attr">30代 ご家族<br>ご夫婦＋お子さま（3歳）</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <p class="voice-text">
+          お送りした物件を毎回事前に細かく調査いただき、レポートを一緒に見ながら
+          ご説明いただけるので1件目から他の不動産屋さんとの違いを実感しました。
+          はじめての住宅購入で不安なことが多いなか、懸念点や考え方もフラットに
+          教えていただけてありがたかったです。
+        </p>
+        <div class="voice-meta">
+          <div class="voice-avatar"><img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Famiry40&backgroundColor=fce5e5" alt="" loading="lazy"></div>
+          <div class="voice-attr">40代 ご家族<br>はじめての住宅購入</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <p class="voice-text">
+          馴染みのないエリアでの家さがしで、不安もありましたが、
+          いろいろな物件と街をプロのご案内で一緒に見れたことで
+          暮らすイメージが湧きました。
+        </p>
+        <div class="voice-meta">
+          <div class="voice-avatar"><img src="https://api.dicebear.com/9.x/lorelei/svg?seed=Single50&backgroundColor=fff3d6" alt="" loading="lazy"></div>
+          <div class="voice-attr">50代 シングル<br>はじめてのエリアでの家さがし</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPEAKER ===== -->
+<section class="speaker" id="speaker">
+  <div class="container narrow">
+    <span class="sec-label">PROFILE</span>
+    <h2 class="section-title">プロフィール</h2>
+    <p class="section-lead">
+      お問い合わせから内見、ご購入後まで、ずっと同じ担当者が伴走します。
+    </p>
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="assets/yuka-avatar.jpg" alt="石井 優香" loading="lazy">
+      </div>
+      <div class="speaker-info">
+        <div class="role">PINT HOME / INA&amp;Associates</div>
+        <h3>石井 優香</h3>
+        <div class="name-en">YUKA ISHII</div>
+        <p class="speaker-tagline">プロの知見<span class="plus">＋</span>子育て当事者の理解</p>
+        <p>2児のママとして、共働き・都心暮らしのリアルを経験中。家事動線や教育環境など、暮らしと切り離せない視点で住まい選びを整理します。</p>
+        <p class="speaker-message">
+          家を買う前って、誰に何を聞けばいいか分からないですよね。<br>
+          私自身が子育てをしながら家探しをした経験から、“価値観の近い人と、ちゃんと一緒に考えたい”という気持ちを形にしました。<br>
+          買う・買わないは、あとで決めて大丈夫です。まずは気軽にLINEください☺️
+        </p>
+        <dl class="speaker-data">
+          <div class="row"><dt>所属</dt><dd>INA&amp;Associates株式会社 / PINT HOME</dd></div>
+          <div class="row"><dt>得意領域</dt><dd>子育て世代の中古マンション・戸建て・リノベ前提物件</dd></div>
+          <div class="row"><dt>対応エリア</dt><dd>東京23区・神奈川東部・千葉/埼玉一部</dd></div>
+          <div class="row"><dt>スタンス</dt><dd>ご家族の人生の節目に、丁寧に伴走する</dd></div>
+          <div class="row"><dt>SNS</dt><dd>Instagram <a href="https://www.instagram.com/yuka_pinthome/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">@yuka_pinthome</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTAGRAM ===== -->
+<section class="ig" id="instagram">
+  <div class="container narrow">
+    <span class="sec-label">INSTAGRAM</span>
+    <h2 class="section-title">日々の発信は、<br>こちらから。</h2>
+    <p class="ig-lead">
+      物件選びの視点や、子育てと暮らしのリアルを、顔出し実名で発信しています。<br>
+      「この人と一緒に行きたい」と思っていただけたら、LINEでお声がけください。
+    </p>
+
+    <a class="ig-link reveal" href="https://www.instagram.com/yuka_pinthome/" target="_blank" rel="noopener">
+      <span class="ig-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="ig-text">
+        <span class="ig-handle">@yuka_pinthome</span>
+        <span class="ig-desc">Instagramで石井優香の発信を見る</span>
+      </span>
+      <span class="ig-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== PREP (調査の様子) ===== -->
+<section class="prep" id="prep">
+  <div class="container">
+    <span class="sec-label">PREPARATION</span>
+    <h2 class="section-title">物件情報を受け取ったら、<br>こんな準備をしています</h2>
+    <p class="section-lead">
+      内見当日にスムーズにご判断いただけるよう、事前にしっかり調べてレポートにまとめます。
+    </p>
+  </div>
+  <div class="prep-image reveal">
+    <img src="assets/prep-report.png" alt="不動産査定報告書のイメージ" loading="lazy">
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="howitworks" id="how">
+  <div class="container narrow">
+    <span class="sec-label">HOW IT WORKS</span>
+    <h2 class="section-title">他にも、こんなことを<br>ご一緒できます</h2>
+    <p class="section-lead">
+      物件の調査だけでなく、住まい探しに関わることをまるごとサポートします。<br>
+      ご希望の方のみ、必要なときにご活用ください。
+    </p>
+    <ul class="how-list reveal-stagger">
+      <li class="how-item">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-7-9-7-9 7 9 7z"/><path d="M3 13l9 7 9-7"/></svg></span>
+        <p>リノベーションの概算費用を、ざっくり試算します。</p>
+      </li>
+      <li class="how-item">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg></span>
+        <p>信頼できるリノベーション会社をご紹介します。</p>
+      </li>
+      <li class="how-item">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg></span>
+        <p>住宅ローンを、どこがいいか一緒に比較します。</p>
+      </li>
+      <li class="how-item">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M9 17h6M9 13h6M9 9h6"/></svg></span>
+        <p>内見後の感想や条件の見直しも、ご一緒に整理します。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section class="price" id="price">
+  <div class="container">
+    <span class="sec-label">PRICE</span>
+    <h2 class="section-title">料金について</h2>
+    <p class="section-lead">
+      費用が発生するのは、ご購入が決まった引き渡し時のみ。それまではすべて無料でご利用いただけます。
+    </p>
+
+    <div class="price-summary reveal">
+      <div class="price-row free">
+        <div class="ps-label">ご相談・内見同行・<br>購入決定後の手続きまで</div>
+        <div class="ps-value">¥0</div>
+      </div>
+      <div class="price-row paid">
+        <div class="ps-label">ご成約・お引き渡し時のみ</div>
+        <div class="ps-value">仲介手数料</div>
+      </div>
+    </div>
+
+    <div class="price-note-box reveal">
+      <ul>
+        <li>ご相談・内見同行・住宅ローン相談・リノベーション会社のご紹介は、すべて無料です。</li>
+        <li>「やっぱり買わない」となっても、費用は発生しません。</li>
+        <li>仲介手数料は、ご購入物件の引き渡し時にのみ発生します。</li>
+      </ul>
+      <div class="price-example">
+        <strong>仲介手数料：物件価格 × 3% + 6万円 + 消費税</strong><br><br>
+        ご自身で物件を探された場合でも、不動産会社を通してご購入される際にかかる費用です。<br>
+        PINT HOMEでは、物件調査・内見同行・契約手続き・お引き渡しまで、住まいさがしの一連のサポートを、この手数料の範囲内でご提供しています。<br><br>
+        <span style="color:var(--ink-mute)">※ お引き渡し時に一度のお支払いで、住宅ローンに組み込むことも可能です。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="flow" id="flow">
+  <div class="container">
+    <span class="sec-label">FLOW</span>
+    <h2 class="section-title">内見の流れ</h2>
+    <p class="section-lead">
+      物件名を正確に覚えていなくても大丈夫です。お分かりの範囲で物件情報をお送りください。
+    </p>
+    <div class="flow-list reveal-stagger">
+      <div class="flow-item">
+        <span class="step">STEP 01</span>
+        <h3>物件情報と希望日程をLINEで送る</h3>
+        <p>物件名・所在地・間取りなど、お分かりの範囲で大丈夫です。あわせて内見の希望日程もお知らせください。</p>
+      </div>
+      <div class="flow-item">
+        <span class="step">STEP 02</span>
+        <h3>24時間以内にお返事</h3>
+        <p>まずは内見の可否と日程をご案内します。価格分析や管理状態のレポートは、内見日までに整えてお渡しします。</p>
+      </div>
+      <div class="flow-item">
+        <span class="step">STEP 03</span>
+        <h3>当日、現地でお会いしましょう</h3>
+        <p>ご一緒にチェックしたあと、感想を整理するお時間も設けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container narrow">
+    <span class="sec-label">FAQ</span>
+    <h2 class="section-title">よくあるご質問</h2>
+    <div class="faq-list reveal-stagger">
+      <details class="q">
+        <summary>何件まで内見できますか？上限はありますか？</summary>
+        <div class="a">
+          上限はありません。1件目で決まる方もいれば、半年かけて10件以上ご一緒する方もいます。
+          ご納得いただくまで、お付き合いします。
+        </div>
+      </details>
+      <details class="q">
+        <summary>関東圏外の物件でも相談できますか？</summary>
+        <div class="a">
+          申し訳ありませんが、現在は東京23区・神奈川東部・千葉/埼玉の一部のみの対応となっております。
+          エリア外の場合は、信頼できる地域のパートナーをご紹介できる場合もありますので、まずはお気軽にご相談ください。
+        </div>
+      </details>
+      <details class="q">
+        <summary>子連れで内見しても大丈夫ですか？</summary>
+        <div class="a">
+          もちろんです。むしろ、お子さま視点での動線・収納・周辺環境の確認ができるので、
+          ご家族みんなでの内見をおすすめしています。当日は声掛けや配慮もこちらでさせていただきます。
+        </div>
+      </details>
+      <details class="q">
+        <summary>他社で一度問い合わせた物件は本当にダメですか？</summary>
+        <div class="a">
+          不動産業界のルール上、先に問い合わせた会社が窓口となります。
+          ただし、その物件が違ったとしても、次の物件からはPINT HOMEで一緒に動けます。
+        </div>
+      </details>
+      <details class="q">
+        <summary>リノベーション前提の物件も相談できますか？</summary>
+        <div class="a">
+          得意分野です。物件選びの段階から「リノベ可能か」「いくらかかるか」を試算し、
+          提携リノベ会社のご紹介まで一貫してサポートします。
+        </div>
+      </details>
+      <details class="q">
+        <summary>内見の予約はどれくらい前にすれば良いですか？</summary>
+        <div class="a">
+          物件の状況にもよりますが、最短で当日〜翌日の手配も可能です。
+          余裕を持って2〜3日前にLINEいただけるとスムーズです。
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section id="cta" class="final-cta">
+  <div class="container">
+    <span class="sec-label">CONTACT</span>
+    <h2>迷ったら、まず<br>物件情報だけでもどうぞ。</h2>
+    <p>
+      お分かりの範囲で物件情報をお送りいただければ、内見日までに価格分析や管理状態のレポートをまとめてお渡しします。
+    </p>
+    <a class="btn-line" href="https://il9fo0d8.autosns.app/addfriend/s/VI9Jw20ZLk/@074himyv" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.477 3 2 6.582 2 11c0 2.59 1.55 4.88 3.95 6.35-.17.62-.62 2.27-.71 2.62-.11.44.16.43.34.31.14-.09 2.27-1.55 3.18-2.18.74.1 1.5.16 2.24.16 5.523 0 10-3.582 10-8s-4.477-8-10-8z"/></svg>
+      LINEで物件情報を送る
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site">
+  <div class="footer-inner">
+    <div class="footer-brand">PINT HOME</div>
+    <div class="footer-tag">
+      子育て家族のマイホーム探しに、伴走します。<br>
+      PINT HOMEは、INA&amp;Associates株式会社が運営する伴走型仲介ブランドです。
+    </div>
+    <div class="footer-meta">© 2026 INA&amp;Associates Inc.</div>
+  </div>
+</footer>
+
+<!-- ===== Mobile fixed bottom CTA ===== -->
+<div class="sticky-cta">
+  <a class="btn-line" href="https://il9fo0d8.autosns.app/addfriend/s/VI9Jw20ZLk/@074himyv" target="_blank" rel="noopener">
+    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.477 3 2 6.582 2 11c0 2.59 1.55 4.88 3.95 6.35-.17.62-.62 2.27-.71 2.62-.11.44.16.43.34.31.14-.09 2.27-1.55 3.18-2.18.74.1 1.5.16 2.24.16 5.523 0 10-3.582 10-8s-4.477-8-10-8z"/></svg>
+    LINEで物件情報を送る
+  </a>
+</div>
+
+<script>
+  (function(){
+    var h = document.getElementById('siteHeader');
+    if(!h) return;
+    var onScroll = function(){
+      if(window.scrollY > 8) h.classList.add('scrolled');
+      else h.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+
+  /* Show sticky CTA only after the hero leaves the viewport */
+  (function(){
+    var hero = document.querySelector('.hero');
+    var sticky = document.querySelector('.sticky-cta');
+    if(!hero || !sticky || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          sticky.classList.remove('show');
+        } else {
+          sticky.classList.add('show');
+        }
+      });
+    }, {threshold: 0.05});
+    io.observe(hero);
+  })();
+
+  /* Scroll-reveal animations */
+  (function(){
+    if(!('IntersectionObserver' in window)) return;
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('js-anim');
+    var targets = document.querySelectorAll('.reveal, .reveal-stagger, section');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
+    targets.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
